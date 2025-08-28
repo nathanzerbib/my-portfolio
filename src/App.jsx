@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // ============================
 const CONFIG = {
   name: "Nathan Zerbib",
-  tagline: "Freelance developer",
+  tagline: "Freelance developer, Civil Engineer, Urban Water Engineer, Scientific Researcher",
   spotify: {
     artistUrl: "https://open.spotify.com/artist/5XLMnBsFrJlRJG050VFU9u?si=sRmw6rPjRZGRubj5AgfXUQ",
     embedSrc: "https://open.spotify.com/embed/artist/5XLMnBsFrJlRJG050VFU9u?utm_source=generator&theme=0",
