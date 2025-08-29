@@ -6,18 +6,25 @@ import { motion } from "framer-motion";
 // ============================
 const CONFIG = {
   name: "Nathan Zerbib",
-  tagline: "Freelance developer, Civil Engineer, Urban Water Engineer, Scientific Researcher",
+  tagline: "Creator",
   spotify: {
     artistUrl: "https://open.spotify.com/artist/5XLMnBsFrJlRJG050VFU9u?si=sRmw6rPjRZGRubj5AgfXUQ",
     embedSrc: "https://open.spotify.com/embed/artist/5XLMnBsFrJlRJG050VFU9u?utm_source=generator&theme=0",
-
   },
   sites: [
     {
       title: "Z-SEWER",
       url: "#",
       description: "Digital-twin for sewer network.",
-      logo: "/assets/Z-Sewer.png", // place ton PNG dans public/assets/
+      logo: "/assets/Z-Sewer.png",
+    },
+  ],
+  websites: [
+    {
+      title: "p a s s i o n",
+      url: "https://my-portfolio-swart-ten-92.vercel.app",
+      description: "An open world of expression.",
+      logo: "/assets/passion.png",
     },
   ],
   roundCards: [
@@ -29,6 +36,7 @@ const CONFIG = {
     { label: "LinkedIn", url: "https://www.linkedin.com/in/nathan-zerbib-8bb830145" },
   ],
 };
+
 
 // Utility components
 const SectionTitle = ({ children }) => (
@@ -140,6 +148,47 @@ export default function Portfolio() {
             ))}
           </div>
         </section>
+
+{/* Websites — ensuite */}
+<section>
+  <SectionTitle>Website</SectionTitle>
+  <div className="grid grid-cols-1 gap-4">
+    {CONFIG.websites.map((s, i) => (
+      <motion.a
+        key={s.title}
+        href={s.url}
+        target="_blank"
+        rel="noreferrer"
+        className="block"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, delay: i * 0.05 }}
+      >
+        <Card className="p-4">
+          <div className="flex items-center gap-4">
+            {s.logo ? (
+              <img
+                src={s.logo}
+                alt={s.title}
+                className="h-16 w-16 rounded-xl object-cover ring-1 ring-indigo-200/60 dark:ring-indigo-300/20"
+              />
+            ) : (
+              <div className="h-16 w-16 rounded-xl bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-neutral-500 text-xs">
+                LOGO
+              </div>
+            )}
+            <div className="flex-1">
+              <h3 className="text-base sm:text-lg font-semibold">{s.title}</h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">{s.description}</p>
+            </div>
+            <div className="hidden sm:block text-sm opacity-70">Visit ↗</div>
+          </div>
+        </Card>
+      </motion.a>
+    ))}
+  </div>
+</section>
+
 
         {/* Hobby • Music (Spotify en rectangle) — en bas */}
         <section id="hobby">
