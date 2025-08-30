@@ -26,6 +26,12 @@ const CONFIG = {
       description: "An open world of expression.",
       logo: "/assets/passion.png",
     },
+        {
+      title: "L U L L E",
+      url: "https://my-portfolio-swart-ten-92.vercel.app",
+      description: "Your first step into coding.",
+      logo: "/assets/portfoliolulle.png",
+    },
   ],
   roundCards: [
     { title: "CV",     url: "/assets/ZERBIB_Nathan_resume.pdf",  subtitle: "Résumé (PDF)" },
@@ -130,7 +136,7 @@ export default function Portfolio() {
                       <img
                         src={s.logo}
                         alt="Z-SEWER"
-                        className="h-16 w-16 rounded-xl object-cover ring-1 ring-indigo-200/60 dark:ring-indigo-300/20"
+                        className="h-16 w-16 rounded-xl object-cover"
                       />
                     ) : (
                       <div className="h-16 w-16 rounded-xl bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-neutral-500 text-xs">
@@ -170,7 +176,7 @@ export default function Portfolio() {
               <img
                 src={s.logo}
                 alt={s.title}
-                className="h-16 w-16 rounded-xl object-cover ring-1 ring-indigo-200/60 dark:ring-indigo-300/20"
+                className="h-16 w-16 rounded-xl object-cover"
               />
             ) : (
               <div className="h-16 w-16 rounded-xl bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-neutral-500 text-xs">
