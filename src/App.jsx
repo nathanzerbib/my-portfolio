@@ -28,7 +28,7 @@ const CONFIG = {
     },
         {
       title: "L U L L E",
-      url: "https://my-portfolio-swart-ten-92.vercel.app",
+      url: "https://lulle.dev",
       description: "Your first step into coding.",
       logo: "/assets/portfoliolulle.png",
     },
